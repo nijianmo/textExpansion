@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "ftp://jaguar.ncsl.nist.gov/mt/resources/mteval-xml-v1.3.dtd">
+<mteval>
+<tstset setid="example_set" srclang="Arabic" trglang="English" sysid="sample_system">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> Roed Larsen: Middle East " a powder  " music </seg>
+</p>
+<p>
+<seg id="2"> Oslo 6-2 (AFP) - said Terje Roed-Larsen, a former United Nations envoy to the Middle East, the situation in this region not days so dangerous as it is today, comparing the region called " a powder  " music. </seg>
+</p>
+<p>
+<seg id="3"> He said Roed Larsen told the Norwegian public radio " I saw that, " it can now borrow the region in many ways a powder  " music. </seg>
+</p>
+<p>
+<seg id="4"> He added: " I believe that the situation even more difficult, complex, risky than it was for many decades. </seg>
+</p>
+<p>
+<seg id="5"> Among the existing or potential crises in the Middle East Terje Roed-Larsen said the Arab-Israeli conflict the Iranian nuclear file crisis between Lebanon and Syria. </seg>
+</p>
+<p>
+<seg id="6"> He said that " All of this takes us back to the fundamental values and opinions on issues that make the situation exhibition at any moment out of control more than in recent days. </seg>
+</p>
+<p>
+<seg id="7"> Roed Larsen did not mention explicitly acts of violence in the course of demonstrations in the Islamic world in protest against charges of publishing a caricature of the Prophet Mohammed in the European press, by stressing the need for " dialogue " instead of " throwing stones and setting fire. </seg>
+</p>
+<p>
+<seg id="8"> As demonstrators burned buildings included the Danish embassies in Damascus on Saturday while  includes offices the Danish embassy in Beirut, in response to charges published in September in the  of the Danish newspaper published later in a number of European media in all magazine " The Norwegian " . </seg>
+</p>
+<p>
+<seg id="9"> Rod Larsen is currently mandated to monitor the implementation of Security Council resolution 1559, which provides for the disarmament and demobilization of militias and armed groups in Lebanon, including those of the International Organization in the Lebanese Shiite Hizbollah, Palestinian groups. </seg>
+</p>
+</doc>
+<doc docid="doc2" genre="nw">
+<p>
+<seg id="1"> Kofi Annan will be allocated valuable prize Zayed to establish the foundation of agriculture and education of girls in Africa </seg>
+</p>
+<p>
+<seg id="2"> Dubai 7-2 (AFP) - The United Nations Secretary-General Kofi Annan said that he will devote of the Zayed International Prize for Environment and received by Monday evening in Dubai is valued at 500 thousand dollars to set up the foundation of agriculture and education of girls in the African continent. </seg>
+</p>
+<p>
+<seg id="3"> Annan said in a speech during a ceremony to hand over the prize that he decided to " use (the value of) prize to the institution I will not work in Africa in the areas of agriculture and education of girls. </seg>
+</p>
+<p>
+<seg id="4"> He said that he chose " agriculture as the African peoples need a green revolution and girls ' education because there are no other means more effective development. </seg>
+</p>
+<p>
+<seg id="5"> Given the Zayed International Prize for Environment, which was launched in 1998 on behalf of the founder of the State of the United Arab Emirates, Sheikh Zayed Bin Sultan al Nahyan, once every two years to persons who were in the field of the environment. is total prize value million dollars. </seg>
+</p>
+<p>
+<seg id="6"> In addition to Annan obtained by the organization "  "  and Millenium, which is based in Malaysia which includes about 1360 experts in the field of environment, the Scientific Research prize, worth 300 thousand dollars. </seg>
+</p>
+<p>
+<seg id="7"> Sharing former Indonesian minister of environment Emil Salim Senator Angela Cropper responsible for the Foundation for the Defence of the Environment in Trinidad and Tobago prize for non-governmental organizations, worth two hundred thousand dollars. </seg>
+</p>
+<p>
+<seg id="8"> Deputy chairman of the Emirates was Prime Minister the governor of Dubai, Sheikh Mohammed bin Rashid Al Maktoum, met with Annan on Monday. </seg>
+</p>
+<p>
+<seg id="9"> Sheikh Mohammad said during the interview, which focused on the issues of Iraq and the Arab-Israeli conflict " the need to resort to resolve disputes peacefully and solve problems away from violence arms race and double guarantee for the realization of the right, justice and freedom for all people, " according to the Emirates News Agency. </seg>
+</p>
+<p>
+<seg id="10"> According to the Zayed International Prize for Environment in seminars and conferences on the environment hosted by Dubai, the Nineteenth Special Session of the Council of the United Nations Environment Programme and the Ministerial Environment Forum. </seg>
+</p>
+<p>
+<seg id="11"> Dubai also hosted an international conference on disposal of chemical products, which concluded on Monday discussed ways to reduce the risk of chemical products in the world. </seg>
+</p>
+<p>
+<seg id="12"> That was supposed to take place in the conference adopted an agreement in this regard but that an official at the United Nations, told France Presse that this did not take place due to problems related to special funding. </seg>
+</p>
+</doc>
+</tstset>
+</mteval>

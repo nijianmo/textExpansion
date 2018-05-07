@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "ftp://jaguar.ncsl.nist.gov/mt/resources/mteval-xml-v1.3.dtd">
+<mteval>
+<srcset setid="example_set" srclang="Arabic">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> i love the idea that this keyboard is exactly the same as all the other ones out there but for a fraction of the price ! do n't waste your money on a 20 dollar version either ! it paired with my nexus 7 nicely and i believe it will connect with any blue tooth enabled device without fail . the keys are big enough and perfect for typing out essays and reports for those awful college classes i know everyone has to take . </seg>
+</p>
+</doc>
+</srcset>
+</mteval>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "ftp://jaguar.ncsl.nist.gov/mt/resources/mteval-xml-v1.3.dtd">
+<mteval>
+<refset setid="example_set" srclang="Arabic" trglang="English" refid="ref1">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> Roed-Larsen: Middle East a "Powder Keg with Lit Fuse" </seg>
+</p>
+<p>
+<seg id="2"> Oslo 2-6 (AFP) - Terje Roed-Larsen, the former United Nations Middle East envoy, considered the situation in the region as having never been as dangerous as it is today and compared the region to a "powder keg with a lit fuse". </seg>
+</p>
+<p>
+<seg id="3"> Roed-Larsen, speaking to the Norwegian NRK radio station said that "the region can now be compared in several respects to a powder keg with a lit fuse." </seg>
+</p>
+<p>
+<seg id="4"> He added "I think the situation is more difficult, complicated and dangerous than it has been for a number of decades." </seg>
+</p>
+<p>
+<seg id="5"> Among the existing and potential crises in the Middle East, Roed-Larsen mentioned the Arab-Israeli dispute, the Iranian nuclear portfolio and the crisis between Lebanon and Syria. </seg>
+</p>
+<p>
+<seg id="6"> He said that "all this brings us back to issues of fundamental values and opinions which make the situation more likely to get out of control at any moment than it has been in the last few days." </seg>
+</p>
+<p>
+<seg id="7"> Roed-Larsen did not openly mention the acts of violence that permeated demonstrations in the Muslim world in protest against the publication of caricatures of the Prophet Muhammad in the European press, limiting himself to emphasizing the need for "dialogue" rather than "throwing stones and lighting fires." </seg>
+</p>
+<p>
+<seg id="8"> Demonstrators set fire to the Danish and Norwegian embassy buildings in Damascus on Saturday while a building housing the Danish embassy in Beirut was set on fire in response to the publication of the caricatures in September in the Danish newspaper Jyllands-Posten and their subsequent republication in the European media, led by the Norwegian magazine Magazinet. </seg>
+</p>
+<p>
+<seg id="9"> Roed-Larsen is currently in charge of monitoring the implementation of Security Council resolution 1559 which stipulates the disarmament of militias and armed groups in Lebanon, including, in the international organization's opinion, the Lebanese Shiite Hezbollah and Palestinian groups. </seg>
+</p>
+</doc>
+<doc docid="doc2" genre="nw">
+<p>
+<seg id="1"> Kofi Annan to Donate Zayed Prize to Establish Foundation for Agriculture and Educating Girls in Africa. </seg>
+</p>
+<p>
+<seg id="2"> Dubai 2-7 (AFP) - The Secretary-General of the United Nations Kofi Annan said he would donate the international Zayed Prize for the Environment, which he received on Monday night in Dubai worth 500,000 dollars, to set up a foundation for agriculture and educating girls in Africa. </seg>
+</p>
+<p>
+<seg id="3"> Annan said at the prize-giving ceremony that he had decided "to use the prize to set up a foundation that I will establish in Africa to work in the fields of agriculture and educating girls." </seg>
+</p>
+<p>
+<seg id="4"> He said that he chose "agriculture because Africa's people need a green revolution and girls' education because there is no more effective tool for development." </seg>
+</p>
+<p>
+<seg id="5"> The Zayed international prize for the Environment, launched in 1998 and named after the founder of the United Arab Emirates Sheikh Zayed Bin Sultan Al Nahyan, is awarded once every two years to distinguished individuals in the field of environmental protection. The total value of the prizes is one million dollars. </seg>
+</p>
+<p>
+<seg id="6"> In addition to Annan, the Millennium Ecosystem Assessment organization, based in Malaysia, with around 1360 environmental experts, won the scientific research prize worth 300,000 dollars. </seg>
+</p>
+<p>
+<seg id="7"> Former Indonesian environment minister Emil Salim and Senator Angela Cropper, in charge of an environmental protection organization in Trinidad and Tobago, shared the prize for non-governmental organizations worth 200,000 dollars. </seg>
+</p>
+<p>
+<seg id="8"> The Emirates' Deputy President, Dubai's ruler and head of government Sheikh Mohammed Bin Rashid Al Maktoum, met Annan on Monday. </seg>
+</p>
+<p>
+<seg id="9"> Sheikh Mohammed said in an interview focusing on the Iraq issue and the Arab-Israeli conflict that it was "necessary to settle the conflicts and resolve the problems peacefully away from violence, the arms race and double standards to ensure that right prevails and to allow justice and freedom for all people", according to the Emirates news agency. </seg>
+</p>
+<p>
+<seg id="10"> The Zayed International Prize for the Environment award ceremony included seminars and conferences dealing with the environment. It is hosted in Dubai and includes the ninth exceptional meeting of the United Nations Environment Program Board and the world ministerial forum on the environment. </seg>
+</p>
+<p>
+<seg id="11"> Dubai also hosted the international conference on Chemical Products Disposal which ended on Monday and looked into means of limiting the dangers of chemical products globally. </seg>
+</p>
+<p>
+<seg id="12"> The conference was supposed to adopt an agreement concerning this but a United Nations official told Agence France Presse that this did not happen because of problems relating to funding. </seg>
+</p>
+</doc>
+</refset>
+<refset setid="example_set" srclang="Arabic" trglang="English" refid="ref2">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> Roed-Larsen: The Middle East Is "A Powder Keg With A Lit Fuse." </seg>
+</p>
+<p>
+<seg id="2"> Oslo, February 6 (A.F.P.) - Terje Roed-Larsen, the former UN envoy to the Middle East, considered that the situation in that region was never at the level of danger in which it is today, and compared the region to "a powder keg with a lit fuse." </seg>
+</p>
+<p>
+<seg id="3"> Speaking to the Norwegian Public Radio "NRK", Roed-Larsen said: "In a lot of respects, the region now can be compared to a powder keg with a lit fuse." </seg>
+</p>
+<p>
+<seg id="4"> And he added: "I think that the situation is more difficult, more complicated and more dangerous than it has been in many decades." </seg>
+</p>
+<p>
+<seg id="5"> Among the current and latent crises in the Middle East, Roed-Larsen mentioned the Arab-Israeli conflict, the Iranian nuclear issue and the crisis between Lebanon and Syria. </seg>
+</p>
+<p>
+<seg id="6"> He said: "All this brings us back to issues of fundamental values and opinions that make the situation more vulnerable to getting out of control at any moment than it has in recent days." </seg>
+</p>
+<p>
+<seg id="7"> Roed-Larsen did not explicitly mention the acts of violence that occurred during demonstrations in the Islamic world in protest against the publication in European newspapers of cartoons about the Prophet Mohammad, but only emphasized the necessity of "dialogue" instead of "throwing stones and lighting fires." </seg>
+</p>
+<p>
+<seg id="8"> Demonstrators burned the two buildings of the Danish and Norwegian Embassies in Damascus on Saturday, whereas a building housing an office of the Danish Embassy in Beirut was burned, in reaction to the publication in September of drawings in the Danish daily Jyllands-Posten and their subsequent re-publication in a number of European media channels led by the Norwegian magazine "Magasinet." </seg>
+</p>
+<p>
+<seg id="9"> Roed-Larsen is currently in charge of monitoring the implementation of United Nations Security Council resolution 1559 that stipulates the disarming of militias and armed groups in Lebanon, including, according to that international organization, the Lebanese Shiite Hezbollah and Palestinian groups. </seg>
+</p>
+</doc>
+<doc docid="doc2" genre="nw">
+<p>
+<seg id="1"> Kofi Annan To Earmark  Amount Of The Zayed Prize For The Establishment Of A Foundation For Agriculture And The Education Of Girls In Africa </seg>
+</p>
+<p>
+<seg id="2"> Dubai, February 7 (A.F.P.) - The Secretary General of the United Nations Kofi Annan said that he will earmark the amount of the Zayed International Prize for the Environment that he received Monday evening in Dubai, and which amounts to $500,000 for the establishment of a foundation for agriculture and the education of girls in the African continent. </seg>
+</p>
+<p>
+<seg id="3"> In a speech during the ceremony in which he was awarded the Prize, Annan said that he had decided "to use (the amount) of the Prize to launch a foundation which I will undertake to send to work in Africa in the areas of agriculture and the education of girls." </seg>
+</p>
+<p>
+<seg id="4"> He explained that he chose "agriculture because the African peoples need a green revolution, and the education of girls because there are no other more effective means for development." </seg>
+</p>
+<p>
+<seg id="5"> The Zayed International Prize for the Environment, which was launched in 1998 in the name of the founder of the State of the United Arab Emirates, Sheikh Zayed Bin Sultan Al Nahyan, is granted once every two years to persons who distinguish themselves in the field of the defense of the environment. The overall value of its prizes is one million dollars. </seg>
+</p>
+<p>
+<seg id="6"> In addition to Annan, the organization "Millennium Ecosystem Assessment", which is headquartered in Malaysia and includes about 1,360 experts in the field of the environment, received the Scientific Research Prize whose value is $300,000. </seg>
+</p>
+<p>
+<seg id="7"> The former Indonesian Environment Minister Emil Salim, and Senator Angela Cropper who leads an institution for the defense of the environment in Trinidad and Tobago, shared the prize designated for non-governmental organizations whose value is $200,000. </seg>
+</p>
+<p>
+<seg id="8"> The Vice-President of the Emirates, Prime Minister and Governor of Dubai Sheikh Mohammad Bin Rashed Al Maktoum hosted Annan on Monday. </seg>
+</p>
+<p>
+<seg id="9"> During the interview focusing on the two files of Iraq and the Arab-Israeli conflict, Sheikh Mohammad emphasized "the necessity to resort to resolving conflicts and solving problems peacefully, without any violence, the race for armament and retaliation, as a guarantee for achieving rights and providing justice and freedom for all peoples", according to the Emirates News Agency. </seg>
+</p>
+<p>
+<seg id="10"> The awarding of the Zayed International Prize for the Environment took place as part of seminars and conferences concerned with the environment and hosted by Dubai, including the 9th Extraordinary Session of the Board of Directors of the UN Program for the Environment, and the International Ministerial Forum for the Environment. </seg>
+</p>
+<p>
+<seg id="11"> Dubai also hosted the International Conference on Chemical Product Management, which ended on Monday and discussed means to limits the hazards of chemical products in the world. </seg>
+</p>
+<p>
+<seg id="12"> An agreement in this regard was expected to be adopted by the Conference, but a United Nations official told Agence France Presse that this did not happen because of problems associated primarily with financing. </seg>
+</p>
+</doc>
+</refset>
+<refset setid="example_set" srclang="Arabic" trglang="English" refid="ref3">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> Roed Larsen: The Middle East: " Barrel of Gunpowder with a Burning Wick" </seg>
+</p>
+<p>
+<seg id="2"> Oslo 2/06 (A.F.P) - The former U.N. envoy to the Middle East, Terje Roed Larsen, believes that the situation in this region has never been as dangerous as it is now, comparing the region to "a barrel of gunpowder with a burning wick." </seg>
+</p>
+<p>
+<seg id="3"> In an interview with Norwegian State Broadcasting (NRK), Roed Larsen said, "The region now can be compared, in many aspects, to a barrel of gunpowder with a burning wick". </seg>
+</p>
+<p>
+<seg id="4"> He added, "I believe the situation is more difficult, complex, and dangerous than it has been in many decades." </seg>
+</p>
+<p>
+<seg id="5"> Among the current and latent crises in the Middle East, Roed Larsen mentioned the Arab-Israeli conflict, the Iranian nuclear issue, and the crisis between Lebanon and Syria. </seg>
+</p>
+<p>
+<seg id="6"> He said that "All this brings us back to questions of fundamental values and opinions that put the situation at risk of getting out of control at any moment more than it has been in recent days." </seg>
+</p>
+<p>
+<seg id="7"> Roed Larsen did not explicitly mention the violence that pervaded the demonstrations in the Islamic World in protest against the publication of cartoons about the Prophet Muhammad in the European newspapers. He just stressed the necessity of "dialogue" instead of "throwing stones and setting fires." </seg>
+</p>
+<p>
+<seg id="8"> Demonstrators set the Danish and Norwegian embassies in Damascus on fire Saturday, and a building containing an office of the Danish Embassy in Beirut was also set on fire in response to the publication of the drawings in September in the Danish newspaper Jyllands-Posten, and their subsequent republication in a number of European media, foremost among them the Norwegian magazine Magazinet. </seg>
+</p>
+<p>
+<seg id="9"> Roed Larsen is currently assigned to monitor the implementation of Security Council Resolution 1559 which calls for the disarming of the militias and armed groups in Lebanon, including, according to the international organization, the Shiite Lebanese Hezbollah, and Palestinian groups. </seg>
+</p>
+</doc>
+<doc docid="doc2" genre="nw">
+<p>
+<seg id="1"> Kofi Annan to Use  Sheikh Zayed Prize for Establishing Institution for Agriculture and Girls' Education in Africa </seg>
+</p>
+<p>
+<seg id="2"> Dubai, 2/07 (AFP)- United Nations Secretary General Kofi Annan said that he will use the money from the Zayed International Prize for the Environment, which he received in Dubai on Monday evening, and which is worth $500,000, for the establishment of an institution for agriculture and girls' education on the African continent. </seg>
+</p>
+<p>
+<seg id="3"> In a speech he delivered during the prize ceremony Annan emphasized that he had decided "to use the  prize money to create an institution which I will send to work in Africa in the fields of agriculture and the education of girls." </seg>
+</p>
+<p>
+<seg id="4"> He explained that he chose "agriculture because the African people need a green revolution and they need to educate girls because there are no means of development that are more effective." </seg>
+</p>
+<p>
+<seg id="5"> The Zayed International Prize for the Environment, which was launched in 1998 and named after the founder of the United Arab Emirates, Sheikh Zayed Bin Sultan Al Nahyan, is awarded biennially to people who are distinguished in the field of environmental protection. The total value of its prizes is $1 million. </seg>
+</p>
+<p>
+<seg id="6"> In addition to Annan, the Millennium Ecosystem Assessment organization based in Malaysia, which includes about 1,360 experts in the field of the environment, won the prize for scientific research which is worth $300,000. </seg>
+</p>
+<p>
+<seg id="7"> The former Indonesian Minister of the Environment, Emil Salim, and Senator Angela Cropper, the Head of the Foundation for Environmental Protection in Trinidad and Tobago, shared the prize for non-governmental organizations which is worth $200,000. </seg>
+</p>
+<p>
+<seg id="8"> Emirates Vice President, Head of Government, and Ruler of Dubai, Sheikh Mohammad Bin Rashid Al Maktoum received Annan on Monday. </seg>
+</p>
+<p>
+<seg id="9"> During the meeting, which focused on the issues of Iraq and the Arab-Israeli conflict, Sheikh Mohammad emphasized "the need to settle disputes and solve problems peacefully without violence, an arms race, and double standards to ensure that truth prevails and that all nations are given justice and freedom," according to Emirates News Agency. </seg>
+</p>
+<p>
+<seg id="10"> The awarding of the Zayed International Prize for the Environment was held along with a number of seminars and conferences dealing with the environment hosted in Dubai, including the ninth special session of the Governing Council of the United Nations Environmental Program and the Global Ministerial Environmental Forum. </seg>
+</p>
+<p>
+<seg id="11"> Dubai also hosted the International Conference on Handling Chemical Products that concluded on Monday and discussed ways of ending the risks of chemical products around the world. </seg>
+</p>
+<p>
+<seg id="12"> The conference was supposed to adopt an agreement concerning this issue. A United Nations official, however, told Agence France-Presse that this did not happen because of problems related to financing. </seg>
+</p>
+</doc>
+</refset>
+<refset setid="example_set" srclang="Arabic" trglang="English" refid="ref4">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> Rod Larsen: The Middle East is "a barrel of gunpowder with a flaming wick." </seg>
+</p>
+<p>
+<seg id="2"> Oslo 6-2 (FB) - Terry Rod Larsen, former United Nations envoy to the Middle East considers that the situation in the region has never before reached the perilous state it is currently at, likening the region to "a barrel of gunpowder with a flaming wick." </seg>
+</p>
+<p>
+<seg id="3"> Rod Larsen stated, while addressing the public Norwegian radio broadcast, NRK, that it is currently possible, in several ways, to liken the region to "a barrel of gunpowder with a flaming wick." </seg>
+</p>
+<p>
+<seg id="4"> He added: "I believe the situation is more difficult, complex and dangerous than it was several decades ago." </seg>
+</p>
+<p>
+<seg id="5"> Among the current or underlying crises in the Middle East, Rod Larsen mentioned the Arab-Israeli conflict and the Iranian nuclear portfolio, as well as the crisis between Lebanon and Syria. </seg>
+</p>
+<p>
+<seg id="6"> He stated: "All this leads us back to crucial values and opinions, which render the situation prone at any moment to getting out of control, more so than it was in past days." </seg>
+</p>
+<p>
+<seg id="7"> Rod Larsen omitted frank mention of the acts of violence interspersed with demonstrations in the Islamic world, in objection to the publication of caricatures of the prophet Mohammed in European newspapers, finding it sufficient to stress the necessity of "dialogue" instead of "casting stones and flaming fire." </seg>
+</p>
+<p>
+<seg id="8"> Demonstrators burned the buildings of the Danish and Norwegian embassies in Damascus on Saturday, while a building housing the Danish embassy in Beirut was also set ablaze, in response to the publication of the drawings in September in the Jyllands Posten Danish newspaper, and their re-publication later in several modes of the European media, at the forefront of which was the Norwegian Magazinet. </seg>
+</p>
+<p>
+<seg id="9"> Rod Larsen is currently commissioned to oversee the implementation of International Security Council Resolution 1559, which dictates confiscating the weapons of militias and armed groups in Lebanon including, in the view of the Council, the Lebanese Shiite Hizballah and Palestinian groups. </seg>
+</p>
+</doc>
+<doc docid="doc2" genre="nw">
+<p>
+<seg id="1"> Kofi Anan will allocate the value of the Zayed Prize to establishing an institution for agriculture and the education of girls in Africa. </seg>
+</p>
+<p>
+<seg id="2"> Dubai 7-2 (FB) - Secretary-General of the United Nations, Kofi Anan, has announced that he will allocate the sum of the Zayed International Prize for the Environment, which he received on Monday night in Dubai, valued at 500,000 dollars, to the establishment of an institution for agriculture and education of girls on the African continent. </seg>
+</p>
+<p>
+<seg id="3"> Anan affirmed during a speech at the prize reception ceremony that he decided to "use the prize money to fund an establishment, which I will send to work in Africa in the domain of agriculture and educating girls." </seg>
+</p>
+<p>
+<seg id="4"> He explained that he chose "agriculture because African peoples need a green revolution and education for girls, since there are no other more effective means of development." </seg>
+</p>
+<p>
+<seg id="5"> The Zayed International Prize for the Environment, which was launched in 1998 in the name of the founder of the United Arab Emirates, Zayed bin Sultan Al Nahyan, is presented once every two years to individuals who are distinguished in the realm of protecting the environment. The total sum of its prizes is one million dollars. </seg>
+</p>
+<p>
+<seg id="6"> In addition to Anan, the organization "Millenium Ecosystem Assessment", based in Malaysia and employing 1360 environmental experts, received the scientific research prize worth 300,000 dollars. </seg>
+</p>
+<p>
+<seg id="7"> Former Indonesian Environment Secretary, Emil Selim, and Senator Angela Kruber, the official in charge of the Environmental Conservation Institution in Trinidad and Tobago, shared the non-governmental organizations' prize, worth 200,000 dollars. </seg>
+</p>
+<p>
+<seg id="8"> Deputy president of the UAE, head of government, ruler of Dubai, Sheik Mohammed bin Rashed Al Maktoum had welcomed Anan on Monday. </seg>
+</p>
+<p>
+<seg id="9"> Sheik Mohammed confirmed during the meeting, which was focused on the portfolios of Iraq and the Arab-Israeli conflict, "the necessity of resorting to conflict resolution and peaceful solutions to problems, away from violence and the race to arms and double standards, as a guarantee for truth, justice and freedom to all nations", as reported by the United Arab Emirates Press Agency. </seg>
+</p>
+<p>
+<seg id="10"> The Zayed prize for the Environment was handed out during seminars and conferences relating to the environment, hosted by Dubai, including the ninth extraordinary session of the United Nations Environment Program Council, and the International Secretarial forum for the Environment. </seg>
+</p>
+<p>
+<seg id="11"> Dubai also hosted the International Conference for Chemical Products Disposal, which was officially ended on Monday, as well as research into methods of minimizing the risks of chemical products to the world. </seg>
+</p>
+<p>
+<seg id="12"> It was supposed that the conference would adopt an agreement in that regard, yet a UN official stated to France Press that this never took place, due to funding problems. </seg>
+</p>
+</doc>
+</refset>
+</mteval>

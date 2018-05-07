@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mteval SYSTEM "ftp://jaguar.ncsl.nist.gov/mt/resources/mteval-xml-v1.3.dtd">
+<mteval>
+<tstset setid="example_set" srclang="Arabic" trglang="English" sysid="sample_system">
+<doc docid="doc1" genre="nw">
+<p>
+<seg id="1"> surprisingly clean looking and considering the bargains of this small form factor factor region 1. all key line up , and help us over the internet capable of loading a tablet . we use our media player to pick up our video library . if you are looking for a single one , this is the one . </seg>
+</p>
+</doc>
+</tstset>
+</mteval>

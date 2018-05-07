@@ -1,0 +1,26 @@
+MT evaluation scorer began on 2009 Oct 1 at 15:35:14
+command line:  ../mteval-v13a.pl -r ref.xml -s src.xml -t tst.xml -c
+  Evaluation of Arabic-to-English translation using:
+    src set "example_set" (2 docs, 21 segs)
+    ref set "example_set" (4 refs)
+    tst set "example_set" (1 systems)
+
+NIST score = 8.1421  BLEU score = 0.4617 for system "sample_system"
+
+# ------------------------------------------------------------------------
+
+Individual N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  6.3431   1.3745   0.3040   0.0810   0.0397   0.0167   0.0053   0.0024   0.0016  "sample_system"
+
+ BLEU:  0.8657   0.5898   0.3909   0.2493   0.1603   0.0994   0.0618   0.0374   0.0258  "sample_system"
+
+# ------------------------------------------------------------------------
+Cumulative N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ NIST:  6.3431   7.7176   8.0215   8.1025   8.1421   8.1588   8.1641   8.1665   8.1681  "sample_system"
+
+ BLEU:  0.8461   0.6984   0.5712   0.4617   0.3719   0.2974   0.2368   0.1875   0.1500  "sample_system"
+MT evaluation scorer ended on 2009 Oct 1 at 15:35:15

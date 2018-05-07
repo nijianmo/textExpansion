@@ -1,0 +1,24 @@
+MT evaluation scorer began on 2009 Oct 1 at 15:34:14
+command line:  ../mteval-v13a.pl -r ref.xml -s src.xml -t tst.xml -b
+  Evaluation of Arabic-to-English translation using:
+    src set "example_set" (2 docs, 21 segs)
+    ref set "example_set" (4 refs)
+    tst set "example_set" (1 systems)
+
+
+BLEU score = 0.4929 for system "sample_system"
+
+# ------------------------------------------------------------------------
+
+Individual N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+ BLEU:  0.8834   0.6198   0.4244   0.2782   0.1816   0.1126   0.0724   0.0467   0.0322  "sample_system"
+
+# ------------------------------------------------------------------------
+Cumulative N-gram scoring
+        1-gram   2-gram   3-gram   4-gram   5-gram   6-gram   7-gram   8-gram   9-gram
+        ------   ------   ------   ------   ------   ------   ------   ------   ------
+
+ BLEU:  0.8635   0.7233   0.6009   0.4929   0.4018   0.3238   0.2606   0.2096   0.1698  "sample_system"
+MT evaluation scorer ended on 2009 Oct 1 at 15:34:14
