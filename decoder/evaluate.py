@@ -13,7 +13,7 @@ import random
 import math
 from tqdm import tqdm
 from load import SOS_token, EOS_token, PAD_token, UNK_token
-from model import EncoderRNN, LuongAttnDecoderRNN, Attn
+from model import EncoderRNN, DecoderRNN, LuongAttnDecoderRNN, Attn
 import pickle
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -35,9 +35,8 @@ class Sentence:
         # return mean of sentence_score
 
     def addTopk(self, topi, topv, decoder_hidden, beam_size, voc):
-        topi = topi.squeeze(0)
-        topv = topv.squeeze(0)
-
+        #topi = topi.squeeze(0)
+        #topv = topv.squeeze(0)
         topv = torch.log(topv)
         terminates, sentences = [], []
         for i in range(beam_size):
@@ -63,7 +62,7 @@ class Sentence:
             words.append('<eos>')
         return (words, self.avgScore())
 
-def beam_decode(decoder, decoder_hidden, encoder_outputs, voc, beam_size, max_length=MAX_LENGTH):
+def beam_decode(decoder, decoder_hidden, voc, beam_size, max_length=MAX_LENGTH):
     terminal_sentences, prev_top_sentences, next_top_sentences = [], [], []
     prev_top_sentences.append(Sentence(decoder_hidden))
     for t in range(max_length):
@@ -71,10 +70,10 @@ def beam_decode(decoder, decoder_hidden, encoder_outputs, voc, beam_size, max_le
             decoder_input = Variable(torch.LongTensor([[sentence.last_idx]]))
             decoder_input = decoder_input.cuda() if USE_CUDA else decoder_input
 
-            decoder_output, decoder_hidden, decoder_attn = decoder(
-                decoder_input, decoder_hidden, encoder_outputs
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden
             )
-            topv, topi = decoder_output.data.topk(beam_size)
+            topv, topi = decoder_output.data.exp().topk(beam_size)
             term, top = sentence.addTopk(topi, topv, decoder_hidden, beam_size, voc)
             terminal_sentences.extend(term)
             next_top_sentences.extend(top)
@@ -89,17 +88,16 @@ def beam_decode(decoder, decoder_hidden, encoder_outputs, voc, beam_size, max_le
     n = min(len(terminal_sentences), 15)
     return terminal_sentences[:n]
 
-def decode(decoder, decoder_hidden, encoder_outputs, voc, max_length=MAX_LENGTH):
+def decode(decoder, decoder_hidden, voc, max_length=MAX_LENGTH):
 
     decoder_input = Variable(torch.LongTensor([[SOS_token]]))
     decoder_input = decoder_input.cuda() if USE_CUDA else decoder_input
 
     decoded_words = []
-    decoder_attentions = torch.zeros(max_length, max_length) #TODO: or (MAX_LEN+1, MAX_LEN+1)
 
     for di in range(max_length):
-        decoder_output, decoder_hidden, decoder_attn = decoder(
-            decoder_input, decoder_hidden, encoder_outputs
+        decoder_output, decoder_hidden = decoder(
+            decoder_input, decoder_hidden
         )
         topv, topi = decoder_output.data.topk(3)
         ni = topi[0][0]
@@ -112,24 +110,23 @@ def decode(decoder, decoder_hidden, encoder_outputs, voc, max_length=MAX_LENGTH)
         decoder_input = Variable(torch.LongTensor([[ni]]))
         decoder_input = decoder_input.cuda() if USE_CUDA else decoder_input
 
-    return decoded_words, decoder_attentions[:di + 1]
+    return decoded_words
 
 
 def evaluate(encoder, decoder, voc, sentence, beam_size, max_length=MAX_LENGTH):
-    #indexes_batch = [indexesFromSentence(voc, sentence)] #[1, seq_len]
-    #lengths = [len(indexes) for indexes in indexes_batch]
-    #input_batch = Variable(torch.LongTensor(indexes_batch), volatile=True).transpose(0, 1)
+    sentence = sentence[2]
+    indexes_batch = [indexesFromSentence(voc, sentence)] #[1, seq_len]
+    lengths = [len(indexes) for indexes in indexes_batch]
+    input_batch = Variable(torch.LongTensor(indexes_batch), volatile=True).transpose(0, 1)
 
-    input_batch = Variable(torch.LongTensor([sentence[:2]]), volatile=True)
     input_batch = input_batch.cuda() if USE_CUDA else input_batch
 
-    encoder_outputs, encoder_hidden = encoder(input_batch)
-    decoder_hidden = encoder_hidden[:decoder.n_layers]
+    decoder_hidden = decoder.init_hidden(1) # decoder do not use encoder information
+    print("beam size={}".format(beam_size))
     if beam_size == 1:
-        return decode(decoder, decoder_hidden, encoder_outputs, voc)
+        return decode(decoder, decoder_hidden, voc)
     else:
-        return beam_decode(decoder, decoder_hidden, encoder_outputs, voc, beam_size)
-
+        return beam_decode(decoder, decoder_hidden, voc, beam_size)
 
 def evaluateRandomly(encoder, decoder, voc, pairs, reverse, beam_size, n=10):
     for i in range(n):
@@ -141,7 +138,7 @@ def evaluateRandomly(encoder, decoder, voc, pairs, reverse, beam_size, n=10):
             print('>', pair[0])
             print('>', pair[1])
         if beam_size == 1:
-            output_words, attentions = evaluate(encoder, decoder, voc, pair[0], beam_size)
+            output_words = evaluate(encoder, decoder, voc, pair[0], beam_size)
             output_sentence = ' '.join(output_words)
             print('<', output_sentence)
         else:
@@ -150,31 +147,12 @@ def evaluateRandomly(encoder, decoder, voc, pairs, reverse, beam_size, n=10):
                 output_sentence = ' '.join(output_words)
                 print("{:.3f} < {}".format(score, output_sentence))
 
-def evaluateInput(encoder, decoder, voc, beam_size):
-    pair = ''
-    while(1):
-        try:
-            pair = input('> ')
-            if pair == 'q': break
-            if beam_size == 1:
-                output_words, attentions = evaluate(encoder, decoder, voc, pair, beam_size)
-                output_sentence = ' '.join(output_words)
-                print('<', output_sentence)
-            else:
-                output_words_list = evaluate(encoder, decoder, voc, pair, beam_size)
-                for output_words, score in output_words_list:
-                    output_sentence = ' '.join(output_words)
-                    print("{:.3f} < {}".format(score, output_sentence))
-        except KeyError:
-            print("Incorrect spelling.")
-
-
 def runTest(n_layers, hidden_size, reverse, modelFile, beam_size, input, corpus):
 
     voc, pairs, valid_pairs, test_pairs = loadPrepareData(corpus)
     
     print('Building encoder and decoder ...')
-    # attribute embeddings
+    '''# attribute embeddings
     attr_size = 64
     attr_num = 2
     with open(os.path.join(save_dir, 'user_item.pkl'), 'rb') as fp:
@@ -189,10 +167,12 @@ def runTest(n_layers, hidden_size, reverse, modelFile, beam_size, input, corpus)
             attr_embedding = attr_embedding.cuda()
    
     encoder = AttributeEncoder(attr_size, attr_num, hidden_size, attr_embeddings, n_layers)
+    '''
     embedding = nn.Embedding(voc.n_words, hidden_size, padding_idx=0) # word embedding
+    encoder = EncoderRNN(voc.n_words, hidden_size, embedding, n_layers)
     attn_model = 'concat'
-    decoder = LuongAttnDecoderRNN(attn_model, embedding, hidden_size, attr_size, voc.n_words, n_layers)    
-    
+    decoder = DecoderRNN(embedding, hidden_size, voc.n_words, n_layers) 
+
     checkpoint = torch.load(modelFile)
     encoder.load_state_dict(checkpoint['en'])
     decoder.load_state_dict(checkpoint['de'])
@@ -200,11 +180,86 @@ def runTest(n_layers, hidden_size, reverse, modelFile, beam_size, input, corpus)
     encoder.train(False);
     decoder.train(False);
 
+    
     if USE_CUDA:
         encoder = encoder.cuda()
         decoder = decoder.cuda()
-    if input:
-        evaluateInput(encoder, decoder, voc, beam_size)
-    else:
-        evaluateRandomly(encoder, decoder, voc, pairs, reverse, beam_size, 30)
-        #evaluateRandomly(encoder, decoder, voc, test_pairs, reverse, beam_size, 30)
+   
+ 
+    evaluateRandomly(encoder, decoder, voc, pairs, reverse, beam_size, 2)
+    #evaluateRandomly(encoder, decoder, voc, test_pairs, reverse, beam_size, 2)
+    
+
+    #sample(encoder, decoder, voc, pairs, reverse)
+    #sample(encoder, decoder, voc, test_pairs, reverse)
+
+def sample(encoder, decoder, voc, pairs, reverse):
+    n_words = 100
+    START_TOKEN = '<str>'
+    STOP_TOKEN = '<eos>'
+    word2idx = voc.word2idx
+    idx2word = voc.idx2word
+
+    path = "./metrics/"
+    f1 = open(path + "ref.txt",'w')
+    f2 = open(path + "tst.txt",'w')
+
+    ref = []
+    tst = []
+    all_lens = []
+    for n in range(100):
+        pair = random.choice(pairs)
+        print("=============================================================")
+        if reverse:
+            print('>', " ".join(reversed(pair[0].split())))
+        else:
+            if len(pair[1]) <= 2:
+                continue
+            print('>', pair[0])
+            print('>', " ".join(pair[1]))
+            sentence = " ".join(pair[1][1:-1])
+            f1.write(sentence + "\n")
+            ref.append(sentence)
+
+        sentence = pair[0][2]
+        indexes_batch = [indexesFromSentence(voc, sentence)] #[1, seq_len]
+        lengths = [len(indexes) for indexes in indexes_batch]
+        input_batch = Variable(torch.LongTensor(indexes_batch), volatile=True).transpose(0, 1)
+
+        input_batch = input_batch.cuda() if USE_CUDA else input_batch
+
+        for temperature in [1]:
+            print('sample {} temperature {}:'.format(n, temperature))
+            hidden = decoder.init_hidden(1)
+            word_idx = word2idx[START_TOKEN]
+            input = Variable(torch.rand(1, 1).mul(word_idx).long(), volatile=True)
+            if USE_CUDA:
+                input = input.cuda()
+            cnt = 0
+            sentence = [START_TOKEN]
+            for i in range(n_words):
+                cnt += 1
+                output, hidden = decoder(input, hidden)
+                word_weights = output.squeeze().data.div(temperature).exp().cpu()
+                word_idx = torch.multinomial(word_weights, 1)[0]
+                word = idx2word[word_idx]
+                if word == STOP_TOKEN:
+                    break
+                if word == "<unk>":
+                    sentence.append("unk")
+                else:
+                    sentence.append(word)
+                input.data.fill_(word_idx)
+            sentence = " ".join(sentence)
+            print(sentence)
+            f2.write(sentence + "\n")
+            tst.append(sentence)
+            all_lens.append(cnt)
+    print('average length of generated samples is: {}'.format(sum(all_lens) / len(all_lens)))
+    f1.close()
+    f2.close()
+
+    with open('generated.pkl','wb') as f:
+        pickle.dump((ref,tst),f)
+
+

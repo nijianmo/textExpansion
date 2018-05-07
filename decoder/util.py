@@ -61,24 +61,17 @@ def binaryMatrix(l, value=PAD_token):
 
 # return attribute index and input pack_padded_sequence
 def inputVar(data, voc, evaluation=False):
-    with open(os.path.join(save_dir, 'word_vocab_lower.pkl'), 'rb') as fp:
+    with open(os.path.join(save_dir, 'word_vocab.pkl'), 'rb') as fp:
         word2idx, idx2word = pickle.load(fp)
     attr = [[d[0], d[1]] for d in data]
-    words = [d[2] for d in data]
+    summaryVar = [d[2] for d in data]
 
     attrVar = Variable(torch.LongTensor(attr), volatile=evaluation) # (batch, attribute_num), in our case it is 2
-    wordVar = []
-    for l in words: # iterate each review
-        curr = []
-        limit = min(5, len(l))
-        for w in l[:limit]:
-            curr.append(w)
-        wordVar.append(curr)
-    indexes_batch = [indexesFromSentence(voc, sentence) for sentence in wordVar]
+    indexes_batch = [indexesFromSentence(voc, sentence) for sentence in summaryVar]
     lengths = [len(indexes) for indexes in indexes_batch]
     padList = zeroPadding(indexes_batch)
     padVar = Variable(torch.LongTensor(padList), volatile=evaluation)
-    return (attrVar, padVar, lengths) # attr input, word input, lengths for word input
+    return (attrVar, padVar, lengths) # attr_input, summary_input, summary_input_lengths
 
 # convert to index, add EOS, zero padding
 # return output variable, mask, max length of the sentences in batch
@@ -97,12 +90,12 @@ def outputVar(l, voc):
 def batch2TrainData(voc, pair_batch, reverse, evaluation=False):
     if reverse:
         pair_batch = [pair[::-1] for pair in pair_batch]
-    pair_batch.sort(key=lambda x: min(len(x[0][2]), 5), reverse=True)
+    pair_batch.sort(key=lambda x: len(x[0][2]), reverse=True) # (user_id, item_id, summary, title) sort on length of summary
     input_batch, output_batch = [], []
     for i in range(len(pair_batch)):
         input_batch.append(pair_batch[i][0])
         output_batch.append(pair_batch[i][1])
-    input, input_word, input_word_lengths = inputVar(input_batch, voc, evaluation=evaluation) # use attribute as user_id and item_id
+    attr_input, summary_input, summary_input_lengths = inputVar(input_batch, voc, evaluation=evaluation)
     output, mask, max_target_len = outputVar(output_batch, voc) # convert sentence to ids and padding
-    return input, input_word, input_word_lengths, output, mask, max_target_len
+    return attr_input, summary_input, summary_input_lengths, output, mask, max_target_len
 
