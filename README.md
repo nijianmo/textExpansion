@@ -10,13 +10,14 @@ https://drive.google.com/drive/folders/1bLC4ZmtwU4bwBFqy-8pJogvcts9eHyCu?usp=sha
 
 To run the code, you need PyTorch >= 0.2 and NLTK.
 
-If you find our code or dataset useful, please cite our paper. Thank!
+If you find our code or dataset useful, please cite our paper. Thanks!
 
+```
 @inproceedings{Ni2018PersonalizedRG,
   title={Personalized Review Generation By Expanding Phrases and Attending on Aspect-Aware Representations},
   author={Jianmo Ni and Julian McAuley},
   booktitle={ACL},
   year={2018}
 }
-
+```
 
